@@ -43,6 +43,14 @@ A backend service built with Node.js and Express that analyzes GitHub user profi
 
 ---
 
+## Deployment Stack
+
+- **App Hosting:** Render (Node.js Web Service)
+- **Database Hosting:** Aiven (Managed MySQL)
+- **Version Control:** GitHub
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -158,6 +166,23 @@ GET https://github-analyzer-pyoe.onrender.com/api/profiles/only-abhiram
 
 ---
 
+## 🧪 Testing with Postman
+
+### Postman Collection
+> _Link will be added here_
+
+### Quick Test Sequence
+1. `GET /` — verify server is running
+2. `POST /api/analyze/username` — analyze a profile  
+3. `POST /api/analyze/username` — should return `cached: true`
+4. `POST /api/analyze/username?force=true` — force refresh
+5. `GET /api/profiles` — list all profiles
+6. `GET /api/profiles/username` — get single profile
+7. `POST /api/analyze/invaliduser99999` — should return 404 (if username is invalid)
+Note: replace "username" with actual username
+
+---
+
 ## 🗄️ Database Schema
 
 ```sql
@@ -266,22 +291,6 @@ npm start
 
 Server runs at `http://localhost:3000`
 
----
-
-## 🧪 Testing with Postman
-
-### Postman Collection
-> https://www.postman.com/universal-rocket-302694/workspace/educase-assginment/collection/40887651-2bf37a3b-b3c5-4f15-ac33-9180bf0561a9?action=share&source=copy-link&creator=40887651
-
-### Quick Test Sequence
-1. `GET /` — verify server is running
-2. `POST /api/analyze/username` — analyze a profile  
-3. `POST /api/analyze/username` — should return `cached: true`
-4. `POST /api/analyze/username?force=true` — force refresh
-5. `GET /api/profiles` — list all profiles
-6. `GET /api/profiles/username` — get single profile
-7. `POST /api/analyze/invaliduser99999` — should return 404 (if username is invalid)
-Note: replace "username" with actual username
 ---
 
 ## 📊 Activity Score Formula
