@@ -33,7 +33,7 @@ A backend service built with Node.js and Express that analyzes GitHub user profi
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Runtime:** Node.js
 - **Framework:** Express.js
@@ -72,7 +72,7 @@ github-analyzer/
 
 ---
 
-## 📦 API Endpoints
+##  API Endpoints
 
 ### `GET /`
 Health check — returns API info and available endpoints.
@@ -166,10 +166,10 @@ GET https://github-analyzer-pyoe.onrender.com/api/profiles/only-abhiram
 
 ---
 
-## 🧪 Testing with Postman
+## Testing with Postman
 
 ### Postman Collection
-> _Link will be added here_
+Link: https://www.postman.com/universal-rocket-302694/workspace/educase-assginment/collection/40887651-2bf37a3b-b3c5-4f15-ac33-9180bf0561a9?action=share&source=copy-link&creator=40887651
 
 ### Quick Test Sequence
 1. `GET /` — verify server is running
@@ -183,7 +183,7 @@ Note: replace "username" with actual username
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ```sql
 CREATE DATABASE IF NOT EXISTS github_analyzer;
